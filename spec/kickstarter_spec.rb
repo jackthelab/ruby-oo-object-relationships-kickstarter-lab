@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pry'
 
 describe 'Backer - ::new' do
   it 'takes a name on initialization, accessible through an attribute reader' do
@@ -92,7 +93,7 @@ describe 'Backer - backed_projects' do
     steven.back_project(magic)
     spencer.back_project(book)
     meryl.back_project(book)
-
+    #binding.pry
     expect(meryl.backed_projects).to eq([karaoke, book])
     expect(steven.backed_projects).to eq([karaoke, magic])
     expect(spencer.backed_projects).to eq([book])
